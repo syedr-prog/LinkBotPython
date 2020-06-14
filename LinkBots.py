@@ -2,21 +2,26 @@
 import linkbot
 import math
 import time
+
+#initialize bots
 robots = [
    linkbot.Linkbot("D7DQ"),
    linkbot.Linkbot("PRNL"),
    linkbot.Linkbot("D3H3"),
    linkbot.Linkbot("7C6R")
 ]
+#small bots
 smallBots = [
    robots[1],
    robots[2]
 ]
+#big bots
 bigBots = [
    robots[0],
    robots[3]
 ]
 
+#assign size
 SMALLBOT_90 = 1
 BIGBOT_90 = 1.6/2
 
@@ -27,6 +32,7 @@ for i in robots:
 
 time.sleep(3)
 
+#add moves
 for i in smallBots:
    i.wheel_diameter = 3.5
    i.track_width = 3.7
